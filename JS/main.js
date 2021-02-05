@@ -99,5 +99,16 @@ document.addEventListener('DOMContentLoaded', function() {
 			});
 			
 		}
-    });
+	});
+	$('.mycustom-scroll').mCustomScrollbar({
+		axis: 'x',              // вертикальный скролл 
+		scrollInertia: '330',   // продолжительность прокрутки, значение в миллисекундах 
+		mouseWheel: {
+			deltaFactor: 300    // кол-во пикселей на одну прокрутку колёсика мыши 
+		},
+		advanced:{  
+			updateOnBrowserResize:true,   
+			updateOnContentResize:true   
+		} 
+	});
 });
