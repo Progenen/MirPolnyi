@@ -344,5 +344,22 @@ document.addEventListener('DOMContentLoaded', function() {
             closeModal();
         }
     });
+
+	const modalDatesItem = document.querySelectorAll('.modal-dates__item');
+	const formTemplate = document.querySelector('.form-template');
+	const formTemplateClose = document.querySelector('.form-template__close');
+
+	modalDatesItem.forEach(element => {
+		element.addEventListener('click', (e)=> {
+			e.preventDefault();
+			formTemplate.classList.toggle('show');
+			closeModal();
+			document.body.classList.toggle('lock');
+		})
+	});
+
+	formTemplateClose.addEventListener('click', (e)=> {
+		formTemplate.classList.toggle('show');
+	})
     
 });
